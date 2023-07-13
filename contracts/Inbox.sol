@@ -4,7 +4,11 @@ pragma solidity 0.8.20;
 contract Inbox {
     string private  message;
 
-    function setMessage(string memory newMessage) public {
+    constructor(string memory newMessage) public {
+        message = newMessage;
+    }
+
+    function setMessage(string memory newMessage) public payable {
         message = newMessage;
     }
 
