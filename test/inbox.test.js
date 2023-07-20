@@ -2,8 +2,6 @@ const assert = require("assert");
 const fs = require("fs");
 const { readFileSync } = require("fs");
 const path = require("path");
-// const ganache = require("ganache-cli");
-// const { abi, bytecode } = require("../compile");
 const { Web3 } = require("web3");
 
 // set up new connection with the etherium network
@@ -32,8 +30,6 @@ beforeEach(async () => {
   });
 
   try {
-    // create new contract object using the ABI bytecode.
-
     tx = await inbox.send({
       from: defaultAccount,
       gas,
